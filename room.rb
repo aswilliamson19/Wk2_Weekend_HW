@@ -22,4 +22,13 @@ attr_accessor :playlist, :guests
     @guests.delete(guest)
   end
 
-end
+  def guest_capacity(guest)
+      if @guests.count > @max_capacity
+        return 'Sorry, room is full.'
+      else
+        return 'Welcome to Your Song karaoke bar! Have a great time!'
+      end
+    end
+
+
+  end

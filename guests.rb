@@ -8,6 +8,9 @@ attr_reader :name, :cash, :fav_song
     @fav_song = fav_song
   end
 
+  def entry_payment(fee)
+    @cash -= fee
+  end
 
 
 end

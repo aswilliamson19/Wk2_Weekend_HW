@@ -3,7 +3,6 @@ require('minitest/rg')
 require_relative('../guests')
 require_relative('../karaoke_bar')
 require_relative('../room')
-require_relative('../songs')
 
 class Karaoke_BarTest < MiniTest::Test
 
@@ -30,6 +29,11 @@ class Karaoke_BarTest < MiniTest::Test
     assert_equal(1, @karaoke_bar.rooms.count)
   end
 
-
+  def test_guest_entry_payment
+    @karaoke_bar.guest_payment(10)
+    @guest1.entry_payment(10)
+    assert_equal(110, @karaoke_bar.till)
+    assert_equal(40, @guest1.cash)
+  end
 
 end

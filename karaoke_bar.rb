@@ -13,4 +13,8 @@ attr_accessor :rooms
     @rooms << room
   end
 
+  def guest_payment(fee)
+    @till += fee
+  end
+
 end
