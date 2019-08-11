@@ -8,8 +8,13 @@ attr_reader :name, :cash, :fav_song
     @fav_song = fav_song
   end
 
-  def entry_payment(fee)
-    @cash -= fee
+  def payment(total)
+    @cash -= total
+  end
+
+  def fav_song(song)
+    if @fav_song == @song
+      return 'Yay, that\'s my favourite song!'
   end
 
 
